@@ -61,6 +61,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
             # 接收到Client的位置信息
             if split_command[0] == 'ClientPosition':
                 all_client_position = client_position(split_command, all_client_position, client_name)
+                continue
 
             if split_command[0] == 'HowToDelete':
                 '''
